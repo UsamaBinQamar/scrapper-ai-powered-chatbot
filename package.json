@@ -21,6 +21,7 @@
     "framer-motion": "^12.4.7",
     "langchain": "^0.3.19",
     "lucide-react": "^0.476.0",
+    "motion": "^12.4.7",
     "next": "15.2.0",
     "puppeteer": "^24.3.0",
     "react": "^19.0.0",

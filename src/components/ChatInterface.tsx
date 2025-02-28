@@ -14,6 +14,7 @@ import {
 import Link from "next/link";
 import { useState, useRef, useEffect, FormEvent, ChangeEvent } from "react";
 import Footer from "./Footer";
+import { LampDemo } from "./Hero";
 
 // ChatInterface logic (now integrated directly into the page)
 type Message = {
@@ -136,8 +137,7 @@ export default function Home() {
           </div>
         </div>
       </header>
-
-      {/* Hero Section */}
+      <LampDemo /> {/* Hero Section */}
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-16">
         {/* Animated Elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -292,7 +292,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section
         id="features"
@@ -353,7 +352,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="relative z-10 border-t border-white/10 bg-black py-24 display flex justify-center items-center">
         <div className="container px-4">
@@ -386,9 +384,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <Footer />
-
       {/* Floating Chat Icon with Animation */}
       <motion.div
         className="fixed bottom-4 right-4 z-50"
@@ -463,7 +459,6 @@ export default function Home() {
           1
         </motion.div>
       </motion.div>
-
       {/* Chat Interface */}
       <AnimatePresence>
         {isChatOpen && (
@@ -595,7 +590,7 @@ export default function Home() {
                     setInputValue(e.target.value)
                   }
                   placeholder="Type your message..."
-                  className="flex-grow rounded-r-none border-0"
+                  className="flex-grow rounded-r-none border-0 text-black  "
                   disabled={isLoading}
                 />
                 <Button
