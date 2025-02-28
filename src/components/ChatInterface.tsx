@@ -31,7 +31,7 @@ export default function Home() {
   const [inputValue, setInputValue] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const chatContainerRef = useRef<HTMLDivElement | null>(null);
-  const chatRef = useRef(null);
+  const chatRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (chatContainerRef.current) {
@@ -41,8 +41,8 @@ export default function Home() {
   }, [messages]);
 
   useEffect(() => {
-    function handleClickOutside(event: any) {
-      if (chatRef.current && !chatRef.current.contains(event.target)) {
+    function handleClickOutside(event: Event) {
+      if (chatRef.current && !chatRef.current.contains(event.target as Node)) {
         setIsChatOpen(false);
       }
     }
