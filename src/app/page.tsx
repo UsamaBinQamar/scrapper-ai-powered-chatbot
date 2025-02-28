@@ -100,16 +100,7 @@ import ChatInterface from "@/components/ChatInterface";
 import React from "react";
 
 const page = () => {
-  return (
-    <div>
-      <main className="flex min-h-screen flex-col p-4">
-        <h1 className="text-2xl font-bold mb-4 text-center">Support Chatbot</h1>
-        <div className="flex-1">
-          <ChatInterface />
-        </div>
-      </main>
-    </div>
-  );
+  return <ChatInterface />;
 };
 
 export default page;
